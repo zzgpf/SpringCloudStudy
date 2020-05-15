@@ -1,6 +1,6 @@
 package gpf.eureka.consumer;
 
-import gpf.base.api.UserApi;
+import gpf.base.api.ProviderApi;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
@@ -8,6 +8,6 @@ import org.springframework.cloud.openfeign.FeignClient;
  */
 
 @FeignClient(name = "eureka-provider-name/eureka-provider")
-public interface UserService extends UserApi {
+public interface ProviderService extends ProviderApi {
 
 }

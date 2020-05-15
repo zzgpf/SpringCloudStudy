@@ -72,6 +72,9 @@ public class TestController {
         }
     }
 
+    /**
+     * 可以用来测试负载均衡算法
+     */
     @GetMapping("/test3")
     public void test3() {
         // ribbon 完成客户端的负载均衡，过滤掉down了的节点，默认使用轮询算法
