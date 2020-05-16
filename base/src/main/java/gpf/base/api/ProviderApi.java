@@ -22,4 +22,12 @@ public interface ProviderApi {
      */
     @GetMapping("/testRibbonTimeOut")
     void testRibbonTimeOut() throws InterruptedException;
+
+    /**
+     * 得到应用端口号
+     *
+     * @return
+     */
+    @GetMapping("/port")
+    int port();
 }

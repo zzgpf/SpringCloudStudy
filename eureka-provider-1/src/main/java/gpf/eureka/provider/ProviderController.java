@@ -1,6 +1,7 @@
 package gpf.eureka.provider;
 
 import gpf.base.api.ProviderApi;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,6 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ProviderController implements ProviderApi {
+
+    @Value("${server.port}")
+    private int port;
 
     @Override
     public void test1() {
@@ -20,5 +24,10 @@ public class ProviderController implements ProviderApi {
         System.out.println("进来了");
         // 睡
         Thread.sleep(100000);
+    }
+
+    @Override
+    public int port() {
+        return port;
     }
 }
